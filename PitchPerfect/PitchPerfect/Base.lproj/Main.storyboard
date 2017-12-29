@@ -29,21 +29,26 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYu-xT-hVt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzE-g0-YL1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzE-g0-YL1">
                                 <rect key="frame" x="118" y="364" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-KK-saF">
-                                <rect key="frame" x="112" y="393" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-KK-saF">
+                                <rect key="frame" x="134" y="393" width="106" height="30"/>
                                 <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WTb-FA-Ote"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cTZ-KK-saF" firstAttribute="centerX" secondItem="HzE-g0-YL1" secondAttribute="centerX" id="7x2-hj-XvH"/>
+                            <constraint firstItem="HzE-g0-YL1" firstAttribute="top" secondItem="TMr-d1-fmg" secondAttribute="bottom" constant="16" id="Bzf-CW-via"/>
+                            <constraint firstItem="cTZ-KK-saF" firstAttribute="top" secondItem="HzE-g0-YL1" secondAttribute="bottom" constant="8" id="enP-0r-Xtc"/>
+                            <constraint firstItem="HzE-g0-YL1" firstAttribute="centerX" secondItem="TMr-d1-fmg" secondAttribute="centerX" id="i6e-uk-Z3e"/>
                             <constraint firstItem="TMr-d1-fmg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iW2-8R-52b"/>
                             <constraint firstItem="TMr-d1-fmg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pBn-80-e5C"/>
                         </constraints>
