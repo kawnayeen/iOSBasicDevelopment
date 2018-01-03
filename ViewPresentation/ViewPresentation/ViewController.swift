@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var dismissAlert : ((_ action : UIAlertAction) -> Void)? = nil
+    
     @IBAction func openCameraRoll(_ sender: Any) {
         let cameraRoll = UIImagePickerController()
         self.present(cameraRoll, animated: true, completion: nil)
@@ -25,17 +27,15 @@ class ViewController: UIViewController {
         let alertController = UIAlertController()
         alertController.title = "Hello iOS"
         alertController.message = "Showing an alert message is so easy :)"
-//        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) {
-//            action in self.dismiss(animated: true, completion: nil)
-//        }
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default,
-                                     handler: {action in self.dismiss(animated: true, completion: nil)})
+        self.dismissAlert = { action in self.dismiss(animated: true, completion: nil) }
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: self.dismissAlert)
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func hideAlertMessage(_ action: UIAlertAction) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func goToDiceView(_ sender: Any) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "DiceView") as! DiceViewController
+        self.present(controller, animated: true, completion: nil)
     }
 }
 

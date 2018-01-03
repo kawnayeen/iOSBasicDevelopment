@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,6 +46,14 @@
                                     <action selector="showAlertDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HtQ-vm-9bc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBI-2a-6gQ">
+                                <rect key="frame" x="142" y="298" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dice View"/>
+                                <connections>
+                                    <action selector="goToDiceView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNE-58-vBh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -53,5 +62,51 @@
             </objects>
             <point key="canvasLocation" x="116" y="122.78860569715144"/>
         </scene>
+        <!--Dice View Controller-->
+        <scene sceneID="Rdq-z6-y7h">
+            <objects>
+                <viewController storyboardIdentifier="DiceView" id="wXo-GK-0sK" customClass="DiceViewController" customModule="ViewPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EOf-GK-17H"/>
+                        <viewControllerLayoutGuide type="bottom" id="wGm-dF-nsJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s3c-Gl-prp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d5" translatesAutoresizingMaskIntoConstraints="NO" id="F2M-x3-RoK" userLabel="DiceTwo">
+                                <rect key="frame" x="127" y="263" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="99a-WQ-GKX"/>
+                                    <constraint firstAttribute="height" constant="120" id="LCp-sF-M0r"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d3" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-tV-LuK" userLabel="DiceOne">
+                                <rect key="frame" x="127" y="124" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="aUX-sw-bH8"/>
+                                    <constraint firstAttribute="width" constant="120" id="vAN-Fd-ngg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.001249546935585094" green="0.44006201004618917" blue="0.0019387858423519514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="E1h-tV-LuK" secondAttribute="trailing" constant="112" id="7XC-r8-Ds4"/>
+                            <constraint firstItem="E1h-tV-LuK" firstAttribute="top" secondItem="EOf-GK-17H" secondAttribute="bottom" constant="104" id="BSr-aa-UA3"/>
+                            <constraint firstItem="E1h-tV-LuK" firstAttribute="leading" secondItem="s3c-Gl-prp" secondAttribute="leadingMargin" constant="111" id="JbV-nh-NuW"/>
+                            <constraint firstItem="F2M-x3-RoK" firstAttribute="leading" secondItem="s3c-Gl-prp" secondAttribute="leadingMargin" constant="111" id="N1E-a8-HTd"/>
+                            <constraint firstItem="F2M-x3-RoK" firstAttribute="top" secondItem="E1h-tV-LuK" secondAttribute="bottom" constant="19" id="U3E-9o-tPd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F2M-x3-RoK" secondAttribute="trailing" constant="112" id="xjK-Zm-d5T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7u2-Mu-BLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="123"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="d3" width="100" height="100"/>
+        <image name="d5" width="100" height="100"/>
+    </resources>
 </document>
