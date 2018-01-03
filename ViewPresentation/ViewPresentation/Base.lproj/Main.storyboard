@@ -22,11 +22,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3x-jS-ueV">
-                                <rect key="frame" x="132" y="318" width="110" height="30"/>
+                                <rect key="frame" x="132" y="184" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera Roll"/>
                                 <connections>
                                     <action selector="openCameraRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HqC-TM-2FD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAN-5D-HbL">
+                                <rect key="frame" x="119" y="222" width="137" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Image Activity"/>
+                                <connections>
+                                    <action selector="openActivityView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Dz-zo-jhh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFL-n4-AE3">
+                                <rect key="frame" x="130" y="260" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Alert Message"/>
+                                <connections>
+                                    <action selector="showAlertDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HtQ-vm-9bc"/>
                                 </connections>
                             </button>
                         </subviews>
