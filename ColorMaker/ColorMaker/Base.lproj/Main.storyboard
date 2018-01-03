@@ -37,6 +37,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gac-x5-XeW">
                                                 <rect key="frame" x="111.5" y="14.5" width="113.5" height="31"/>
                                                 <color key="onTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="changeColorComponent:" destination="BYZ-38-t0r" eventType="valueChanged" id="UoO-TH-ALF"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -51,6 +54,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ouH-Jp-yiN">
                                                 <rect key="frame" x="111.5" y="14.5" width="113.5" height="31"/>
+                                                <connections>
+                                                    <action selector="changeColorComponent:" destination="BYZ-38-t0r" eventType="valueChanged" id="qSx-Dc-R5g"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -66,6 +72,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmm-aT-OtH">
                                                 <rect key="frame" x="111.5" y="14.5" width="113.5" height="31"/>
                                                 <color key="onTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="changeColorComponent:" destination="BYZ-38-t0r" eventType="valueChanged" id="P1Q-Ja-dqb"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -79,7 +88,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGm-nZ-P2U" userLabel="ColorView">
                                         <rect key="frame" x="8" y="8" width="140" height="140"/>
-                                        <color key="backgroundColor" red="0.51049266719999997" green="0.54427967060000004" blue="0.58022684010000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,7 +102,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.51049266715205488" green="0.54427967057984838" blue="0.58022684010152292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kzv-9E-Ifq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="4wl-MH-opt"/>
                             <constraint firstItem="kzv-9E-Ifq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="BJb-Jt-QH9"/>
@@ -104,6 +113,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kzv-9E-Ifq" secondAttribute="trailing" constant="40" id="qxv-qU-QBt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueControl" destination="fmm-aT-OtH" id="QlE-jP-BdZ"/>
+                        <outlet property="colorView" destination="DGm-nZ-P2U" id="zgN-dj-1Xv"/>
+                        <outlet property="greenControl" destination="ouH-Jp-yiN" id="9WB-Ve-HSq"/>
+                        <outlet property="redControl" destination="gac-x5-XeW" id="6y3-Ge-ZGG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
