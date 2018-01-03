@@ -99,6 +99,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="F2M-x3-RoK" secondAttribute="trailing" constant="112" id="xjK-Zm-d5T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstDice" destination="E1h-tV-LuK" id="znW-27-Zuw"/>
+                        <outlet property="secondDice" destination="F2M-x3-RoK" id="wfP-uR-TVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7u2-Mu-BLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

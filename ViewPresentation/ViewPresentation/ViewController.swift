@@ -35,7 +35,13 @@ class ViewController: UIViewController {
     
     @IBAction func goToDiceView(_ sender: Any) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "DiceView") as! DiceViewController
+        controller.firstValue = self.randomDiceValue()
+        controller.secondValue = self.randomDiceValue()
         self.present(controller, animated: true, completion: nil)
+    }
+    
+    func randomDiceValue() -> Int {
+        return Int(1 + (arc4random() % 6))
     }
 }
 
