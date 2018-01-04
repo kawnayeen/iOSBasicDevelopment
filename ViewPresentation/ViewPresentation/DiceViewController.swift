@@ -24,4 +24,8 @@ class DiceViewController: UIViewController {
             self.secondDice.image = UIImage(imageLiteralResourceName: "d\(secondValue)")
         }
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

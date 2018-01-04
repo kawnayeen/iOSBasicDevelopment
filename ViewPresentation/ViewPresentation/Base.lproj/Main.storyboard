@@ -91,14 +91,32 @@
                                     <constraint firstAttribute="width" constant="120" id="vAN-Fd-ngg"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g0-F8-agG">
+                                <rect key="frame" x="157" y="556" width="60" height="45"/>
+                                <color key="backgroundColor" red="0.35138034326424872" green="0.35138034326424872" blue="0.35138034326424872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5GA-ws-WSB"/>
+                                    <constraint firstAttribute="height" constant="45" id="5kW-xX-VGp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="wXo-GK-0sK" eventType="touchUpInside" id="8Gs-fB-QCe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.001249546935585094" green="0.44006201004618917" blue="0.0019387858423519514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="E1h-tV-LuK" secondAttribute="trailing" constant="112" id="7XC-r8-Ds4"/>
                             <constraint firstItem="E1h-tV-LuK" firstAttribute="top" secondItem="EOf-GK-17H" secondAttribute="bottom" constant="104" id="BSr-aa-UA3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3g0-F8-agG" secondAttribute="trailing" constant="142" id="GG1-hq-Rae"/>
                             <constraint firstItem="E1h-tV-LuK" firstAttribute="leading" secondItem="s3c-Gl-prp" secondAttribute="leadingMargin" constant="111" id="JbV-nh-NuW"/>
+                            <constraint firstItem="3g0-F8-agG" firstAttribute="leading" secondItem="s3c-Gl-prp" secondAttribute="leadingMargin" constant="141" id="Jlr-LS-5OE"/>
                             <constraint firstItem="F2M-x3-RoK" firstAttribute="leading" secondItem="s3c-Gl-prp" secondAttribute="leadingMargin" constant="111" id="N1E-a8-HTd"/>
                             <constraint firstItem="F2M-x3-RoK" firstAttribute="top" secondItem="E1h-tV-LuK" secondAttribute="bottom" constant="19" id="U3E-9o-tPd"/>
+                            <constraint firstItem="wGm-dF-nsJ" firstAttribute="top" secondItem="3g0-F8-agG" secondAttribute="bottom" constant="66" id="dUu-03-ieO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F2M-x3-RoK" secondAttribute="trailing" constant="112" id="xjK-Zm-d5T"/>
                         </constraints>
                     </view>
