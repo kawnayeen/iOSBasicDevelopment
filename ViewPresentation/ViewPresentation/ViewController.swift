@@ -34,6 +34,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func goToDiceView(_ sender: Any) {
+        diceTransitionViaSegues()
+    }
+    
+    func diceTransitionViaSegues() {
+        performSegue(withIdentifier: "rollDice", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let diceController = segue.destination as! DiceViewController
+        diceController.firstValue = self.randomDiceValue()
+        diceController.secondValue = self.randomDiceValue()
+    }
+    
+    func diceTransitionViaPresent() {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "DiceView") as! DiceViewController
         controller.firstValue = self.randomDiceValue()
         controller.secondValue = self.randomDiceValue()
@@ -44,4 +58,3 @@ class ViewController: UIViewController {
         return Int(1 + (arc4random() % 6))
     }
 }
-
