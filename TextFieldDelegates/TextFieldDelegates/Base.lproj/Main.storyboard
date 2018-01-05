@@ -52,8 +52,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeR-Hc-AnK">
+                                <rect key="frame" x="112" y="209" width="150" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="J0c-TN-p33"/>
+                                    <constraint firstAttribute="width" constant="150" id="hes-um-Ema"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="gFp-cy-5w4" secondAttribute="trailing" constant="34" id="0vK-O4-9T4"/>
                             <constraint firstItem="lim-rM-N6Z" firstAttribute="top" secondItem="gFp-cy-5w4" secondAttribute="bottom" constant="20" id="7ap-hb-Pf4"/>
@@ -61,11 +71,20 @@
                             <constraint firstItem="zli-Zj-Tbw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="JzL-Pj-n7k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zli-Zj-Tbw" secondAttribute="trailing" constant="34" id="Oqc-lE-Cve"/>
                             <constraint firstItem="zli-Zj-Tbw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="W5n-0M-o7Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WeR-Hc-AnK" secondAttribute="trailing" constant="97" id="cE6-A6-k5i"/>
+                            <constraint firstItem="WeR-Hc-AnK" firstAttribute="top" secondItem="lim-rM-N6Z" secondAttribute="bottom" constant="23" id="eJa-Ag-hbP"/>
                             <constraint firstItem="lim-rM-N6Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="goT-iK-9p7"/>
+                            <constraint firstItem="WeR-Hc-AnK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="jUs-9o-ySr"/>
                             <constraint firstItem="gFp-cy-5w4" firstAttribute="top" secondItem="zli-Zj-Tbw" secondAttribute="bottom" constant="26" id="rxe-7X-Dpa"/>
                             <constraint firstItem="gFp-cy-5w4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="xbk-tt-snG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="charCountLabel" destination="WeR-Hc-AnK" id="s53-Ce-T8U"/>
+                        <outlet property="firstText" destination="zli-Zj-Tbw" id="Vqj-u4-DU4"/>
+                        <outlet property="secondText" destination="gFp-cy-5w4" id="ZP6-Tt-YRs"/>
+                        <outlet property="thirdText" destination="lim-rM-N6Z" id="54Q-uo-hOW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

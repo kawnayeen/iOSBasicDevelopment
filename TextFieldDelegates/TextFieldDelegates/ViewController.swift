@@ -8,18 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var firstText: UITextField!
+    @IBOutlet weak var secondText: UITextField!
+    @IBOutlet weak var thirdText: UITextField!
+    @IBOutlet weak var charCountLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.charCountLabel.isHidden = true
+        self.thirdText.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let nsString = textField.text as NSString?
+        let newString = nsString?.replacingCharacters(in: range, with: string)
+        self.charCountLabel.isHidden = (newString!.characters.count == 0)
+        self.charCountLabel.text = String(newString!.characters.count)
+        return true
     }
-
-
 }
 
