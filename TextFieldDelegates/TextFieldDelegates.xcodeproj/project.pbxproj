@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C843F05520047D6700AF3AB9 /* ColorizeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C843F05420047D6700AF3AB9 /* ColorizeTextField.swift */; };
+		C843F057200497DA00AF3AB9 /* EmojiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C843F056200497DA00AF3AB9 /* EmojiDelegate.swift */; };
 		C8FF40DC1FFF41A30036F46E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF40DB1FFF41A30036F46E /* AppDelegate.swift */; };
 		C8FF40DE1FFF41A30036F46E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF40DD1FFF41A30036F46E /* ViewController.swift */; };
 		C8FF40E11FFF41A30036F46E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FF40DF1FFF41A30036F46E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		C843F05420047D6700AF3AB9 /* ColorizeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorizeTextField.swift; sourceTree = "<group>"; };
+		C843F056200497DA00AF3AB9 /* EmojiDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDelegate.swift; sourceTree = "<group>"; };
 		C8FF40D81FFF41A30036F46E /* TextFieldDelegates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldDelegates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FF40DB1FFF41A30036F46E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8FF40DD1FFF41A30036F46E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				C8FF40E41FFF41A30036F46E /* LaunchScreen.storyboard */,
 				C8FF40E71FFF41A30036F46E /* Info.plist */,
 				C843F05420047D6700AF3AB9 /* ColorizeTextField.swift */,
+				C843F056200497DA00AF3AB9 /* EmojiDelegate.swift */,
 			);
 			path = TextFieldDelegates;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8FF40DE1FFF41A30036F46E /* ViewController.swift in Sources */,
+				C843F057200497DA00AF3AB9 /* EmojiDelegate.swift in Sources */,
 				C8FF40DC1FFF41A30036F46E /* AppDelegate.swift in Sources */,
 				C843F05520047D6700AF3AB9 /* ColorizeTextField.swift in Sources */,
 			);

@@ -16,12 +16,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var charCountLabel: UILabel!
     
     let colorizedDelegate = ColorizeTextField()
+    let emojiDelegate = EmojiDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.charCountLabel.isHidden = true
         self.thirdText.delegate = self
         self.secondText.delegate = colorizedDelegate
+        self.firstText.delegate = emojiDelegate
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
