@@ -15,10 +15,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var thirdText: UITextField!
     @IBOutlet weak var charCountLabel: UILabel!
     
+    let colorizedDelegate = ColorizeTextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.charCountLabel.isHidden = true
         self.thirdText.delegate = self
+        self.secondText.delegate = colorizedDelegate
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
