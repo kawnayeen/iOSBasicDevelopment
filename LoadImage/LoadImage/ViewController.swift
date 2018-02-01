@@ -10,12 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imageURL = URL(string: "https://en.wikipedia.org/wiki/Cat#/media/File:Feral_cat_Virginia_crop.jpg")
+        let imageURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg")
         let task = URLSession.shared.dataTask(with: imageURL!){
             (data, response, error) in
-            print("Task Finish")
+            if error == nil {
+                let downloadedImage = UIImage(data: data!)
+                DispatchQueue.main.async {
+                    self.imageView.image = downloadedImage
+                }
+            }
         }
         task.resume()
     }

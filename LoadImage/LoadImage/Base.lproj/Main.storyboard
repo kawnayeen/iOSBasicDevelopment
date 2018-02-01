@@ -42,6 +42,9 @@
                             <constraint firstItem="zhU-3n-1MJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yVK-Zj-fJh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="zs8-KH-GtA" id="Ipe-NA-mzY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
